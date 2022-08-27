@@ -3,9 +3,10 @@
   "version": "0.0.0",
   "private": false,
   "scripts": {
+
     "pull": "cross-var yarn docu-notion -n $DOCU_NOTION_INTEGRATION_TOKEN -r $DOCU_NOTION_ROOT_PAGE -m ./docs -i ./static/notion_imgs -p /notion_imgs/",
     "start": "docusaurus start",
-    "build": "docusaurus build",
+    "build": "docusaurus build && echo docs.shopbuilder.app > build/CNAME",
     "deploy": "docusaurus deploy"
   },
   "dependencies": {
