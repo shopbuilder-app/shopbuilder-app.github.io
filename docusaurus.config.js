@@ -8,14 +8,14 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 const config = {
   title: "notion pull sample",
   tagline: "",
-  url: "https://sillsdev.github.io",
-  baseUrl: "/docu-notion-sample-site/",
+  url: "https://docs.shopbuilder.app",
+  baseUrl: "/",
   onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
 
   organizationName: "sillsdev", // Usually your GitHub org/user name.
-  projectName: "docu-notion-sample-site", // Usually your repo name.
+  projectName: "shopbuilder-app.github.io", // Usually your repo name.
   deploymentBranch: "gh-pages",
   // Docusaurus recommends "trailingSlash:false", but that gives me an error on build.
   //[ERROR] Error: ENOENT: no such file or directory, open 'C:\dev\docu-notion\build\.html'
