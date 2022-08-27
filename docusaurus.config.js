@@ -86,17 +86,29 @@ const config = {
         ignorePatterns: [],
       },
       navbar: {
-        title: "ShopBuilder App - Flutter App Builder",
+        title: "",
         logo: {
           alt: "Logo",
-          src: "img/logo.svg",
+          src: "img/logo.png",
+          srcDark: 'img/logo_dark.png',
+          href: 'https://shopbuilder.app',
+          target: '_self',
         },
 
         items: [
           {
-            type: "localeDropdown",
-            position: "right",
+            href: 'https://docs.shopbuilder.app',
+            position: 'left',
+            className: 'header-link',
+            label: 'Docs',
           },
+          {
+            href: 'https://shopbuilder.app/pricing/',
+            position: 'left',
+            className: 'header-link',
+            label: 'Pricing',
+          },
+         
         ],
       },
 

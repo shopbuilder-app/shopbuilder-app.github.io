@@ -77,3 +77,22 @@
     display: none;
   }
 }
+
+
+/* my customize */
+.header-link svg {
+  display: none !important;
+}
+.navbar__logo {
+  height: 2.4rem !important;
+  margin-right: 20px;
+}
+.navbar__title {
+  font-weight: 400 !important;
+}
+.menu__link {
+  padding-left: 23px;
+}
+.navbar__item {
+  padding-right: 20px;
+}
