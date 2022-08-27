@@ -76,7 +76,7 @@ const config = {
       metadata: [
         {
           name: "keywords",
-          content: "Bloom, SIL, documentation, help, training",
+          content: "ShopBuilder App - Flutter App Builder",
         },
       ],
       sitemap: {
@@ -86,7 +86,7 @@ const config = {
         ignorePatterns: [],
       },
       navbar: {
-        title: "Sample Docusaurus Site using docu-notion",
+        title: "ShopBuilder App - Flutter App Builder",
         logo: {
           alt: "Logo",
           src: "img/logo.svg",
