@@ -2,32 +2,32 @@ name: Release
 on:
   push:
     branches:
-      - master
+      - main
   workflow_dispatch:
     inputs:
       logLevel:
-        description: 'Log level'     
-        required: true
-        default: 'warning'
+        description: "Log level"
+        required: false
+        default: "warning"
 jobs:
   release:
     name: Release
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
       - name: Setup Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: lts/*
       - name: Install dependencies
         run: yarn
       - name: Pull from Notion
-        env: 
-           DOCU_NOTION_INTEGRATION_TOKEN: ${{ secrets.NOTION_PULL_INTEGRATION_TOKEN }}
-           DOCU_NOTION_ROOT_PAGE: ${{ secrets.NOTION_PULL_ROOT_PAGE }}           
+        env:
+          DOCU_NOTION_INTEGRATION_TOKEN: ${{ secrets.DOCU_NOTION_INTEGRATION_TOKEN }}
+          DOCU_NOTION_SAMPLE_ROOT_PAGE: ${{ secrets.DOCU_NOTION_SAMPLE_ROOT_PAGE }}
         run: yarn pull
       - name: Commit
         uses: stefanzweifel/git-auto-commit-action@v4
@@ -38,6 +38,5 @@ jobs:
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.PERSON_ACCESS_TOKEN_FOR_PUSH_TO_GH_PAGES_BRANCH }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build
-  

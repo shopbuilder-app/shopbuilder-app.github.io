@@ -17,9 +17,6 @@ const config = {
   organizationName: "shopbuilder-app", // Usually your GitHub org/user name.
   projectName: "shopbuilder-app.github.io", // Usually your repo name.
   deploymentBranch: "gh-pages",
-  // Docusaurus recommends "trailingSlash:false", but that gives me an error on build.
-  //[ERROR] Error: ENOENT: no such file or directory, open 'C:\dev\docu-notion\build\.html'
-  trailingSlash: true,
 
   presets: [
     [
